@@ -27,18 +27,17 @@ public class HTTPCallController {
     @ResponseBody
     public Welcome welcomeUser() throws Exception {
 		
-		sendGet();
-        return new Welcome(String.format(welcomemsg ));
+	//	sendGet();
+        return new Welcome("\n"+String.format(sendGet() )+"\n\n");
     }
 	
 	
 	
 	// HTTP GET request
-		private void sendGet() throws Exception {
+		private String sendGet() throws Exception {
 
-			String url = "http://13.52.207.102:4570/stat";
-			
-			URL obj = new URL(url);
+			String url = "http://vpce-0e3cd47c27842c6bb-rie2ycjm.vpce-svc-09314a7b4c6c78edf.us-west-1.vpce.amazonaws.com:4570/http";
+URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
 			// optional default is GET
@@ -63,6 +62,7 @@ public class HTTPCallController {
 
 			//print result
 			System.out.println(response.toString());
+                        return response.toString();
 
 		}
 	
