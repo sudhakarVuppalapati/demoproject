@@ -7,11 +7,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean compile
+      - mvn clean compile -DskipTests
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - mvn package -DskipTests
 artifacts:
   files:
     - target/demo-0.0.1-SNAPSHOT.jar
