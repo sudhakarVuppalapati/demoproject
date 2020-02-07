@@ -15,7 +15,7 @@ import com.infy.agco.util.Welcome;
 public class HealthCheckController {
 	
 
-private static final String welcomemsg = "Welcome!";
+private static final String welcomemsg = "Welcome 222222 222 test !";
 	
 	@RequestMapping(value="/stat", method=RequestMethod.GET )
     @ResponseBody
