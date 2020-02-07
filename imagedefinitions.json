@@ -1,6 +1,6 @@
 [
   {
     "name": "testcicd",
-    "imageUri": "969829910614.dkr.ecr.us-east-2.amazonaws.com/testcicd:latest"
+   
   }
 ]
